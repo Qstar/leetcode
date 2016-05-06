@@ -1,12 +1,4 @@
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x){
-        val = x;
-    }
-}
+import common.TreeNode;
 
 public class MaximumDepthofBinaryTree104 {
     private int maxDepth(TreeNode root){
