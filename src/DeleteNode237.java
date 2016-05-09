@@ -14,10 +14,10 @@ public class DeleteNode237 {
     }
 
     public void deleteNode(ListNode node){
-        if (node == null) {
+        if (node != null) {
+            ListNode temp = node.next;
+            node.val = temp.val;
+            node.next = temp.next;
         }
-        ListNode temp = node.next;
-        node.val = temp.val;
-        node.next = temp.next;
     }
 }

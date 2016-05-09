@@ -7,7 +7,7 @@ public class MoveZeroes283 {
         Arrays.stream(nums).forEach(e -> System.out.print(e + " "));
     }
 
-    public void moveZeroes(int[] nums){
+    private void moveZeroes(int[] nums){
         int len = nums.length;
         int j = 0;
         for (int i = 0; i < len; i++) {
