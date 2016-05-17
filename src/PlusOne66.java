@@ -27,7 +27,7 @@ public class PlusOne66 {
     }
 
     public static void main(String[] args) {
-        int[] digits = {0};
+        int[] digits = {1,9};
         System.out.println(Arrays.toString(new PlusOne66().plusOne(digits)));
     }
 }
