@@ -19,12 +19,12 @@ public class ReverseLinkedList206 {
         ListNode pre = head;
         ListNode p = head.next;
         pre.next = null;
-        ListNode nxt;
+        ListNode next;
         while (p != null) {
-            nxt = p.next;
+            next = p.next;
             p.next = pre;
             pre = p;
-            p = nxt;
+            p = next;
         }
         return pre;
     }
