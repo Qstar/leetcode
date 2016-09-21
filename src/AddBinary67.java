@@ -4,16 +4,17 @@ public class AddBinary67 {
     }
 
     public String addBinary(String a, String b){
-        char[] aa = a.toCharArray();
-        char[] bb = b.toCharArray();
-        StringBuffer sb = null;
-        int lena = aa.length;
-        int lenb = bb.length;
-        int sum = Integer.parseInt("" + aa[lena - 1]) + Integer.parseInt("" + bb[lenb - 1]);
-        if (sum == 2) {
-            sb.append("0");
-        }
+        String result = "";
+        int count = 0;
+        int i = a.length() - 1;
+        int j = b.length() - 1;
 
-        return sb.reverse().toString();
+        while (i >= 0 || j >= 0 || count == 1) {
+            count += i >= 0 ? a.charAt(i--) - '0' : 0;
+            count += j >= 0 ? b.charAt(j--) - '0' : 0;
+            result += (char) (count % 2 + '0');
+            count /= 2;
+        }
+        return new StringBuffer(result).reverse().toString();
     }
 }
